@@ -1,12 +1,6 @@
 # Azure Red Hat OpenShift Private cluster with Jump Host
-The following guide is a basic tutorial to install an ARO private cluster with a jump host
-to connect to and verify the installation.
-
-This tutorial is derived from the following docs:
-- https://learn.microsoft.com/en-us/azure/openshift/howto-create-private-cluster-4x
-- https://mobb.ninja/docs/aro/private-cluster/
-- https://linux.die.net/man/8/sshuttle
-- https://learn.microsoft.com/en-us/azure/openshift/concepts-networking#networking-components
+The following guide is a basic tutorial to install an ARO private cluster with an additional 
+jump host to connect to and verify the installation.
 
 ## Client prerequisites
 Export the Azure environment configurations.
@@ -23,7 +17,7 @@ Install the Azure CLI:
 curl -L https://aka.ms/InstallAzureCli | bash
 ```
 
-The following clients must also be installed on the host used for the deployment:
+The following client tools must also be installed on the host used for the deployment:
 - sshuttle (https://github.com/sshuttle/sshuttle for install instructions)
 - OpenShift CLI (https://access.redhat.com/downloads/content/290 for download)
 
@@ -209,3 +203,9 @@ az feature register --namespace Microsoft.RedHatOpenShift --name UserDefinedRout
 
 For egress, the User Defined Routing option ensures that the newly created cluster has the egress lockdown feature enabled to allow you to secure outbound traffic from your new private cluster.
 
+## References
+This tutorial is derived from the following docs:
+- https://learn.microsoft.com/en-us/azure/openshift/howto-create-private-cluster-4x
+- https://mobb.ninja/docs/aro/private-cluster/
+- https://linux.die.net/man/8/sshuttle
+- https://learn.microsoft.com/en-us/azure/openshift/concepts-networking#networking-components
