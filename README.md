@@ -5,7 +5,6 @@ jump host to connect to and verify the installation.
 ## Client prerequisites
 Export the Azure environment configurations.
 ```
-export GUID=<YOUR_GUID>
 export CLIENT_ID=<YOUR_CLIENT_ID>
 export PASSWORD=<YOUR_PASSWORD>
 export TENANT=<YOUR_TENANT>
